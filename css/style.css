@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap");
+@keyframes rellenar {
+  to {
+    stroke-dasharray: var(--porcentaje) 100;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 1em/200% Cuprum, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  background-color: rgb(250, 250, 250);
+}
+body .logo-1 {
+  justify-content: center;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(17, 80, 77);
+  padding: 20px;
+  text-align: right;
+  border-bottom: 5px solid #3e8505;
+}
+
+nav {
+  padding: 0%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  display: inline;
+  margin: 0 15px;
+}
+ul li a {
+  text-decoration: none;
+  color: #c7c2c2;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-align: right;
+}
+ul li a:hover {
+  color: #1a8abe;
+}
+
+.cajon {
+  display: flex;
+  justify-content: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  text-align: center;
+}
+
+.cajon img {
+  width: 140px;
+  flex-grow: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cajon img:hover {
+  width: 20%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+h1 {
+  text-align: center;
+  color: #07504c;
+  margin: 1%;
+}
+
+h2 {
+  color: #4c8d37;
+}
+
+main {
+  padding: 20px;
+}
+
+.cifras {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+.cifras .cifra {
+  flex: 1;
+  margin: 0 10px;
+}
+.cifras .cifra circle {
+  fill: none;
+  stroke-width: 20;
+  transform: rotate(-90deg);
+  transform-origin: 50%;
+  stroke-dasharray: 100 100;
+  stroke: #b9b4b4;
+}
+.cifras .cifra circle:nth-child(2) {
+  stroke: rgb(17, 80, 77);
+  stroke-dasharray: 0 100;
+  animation: rellenar 0.35s linear forwards;
+}
+
+#metodologia dt {
+  color: #8eb622;
+}
+#metodologia .img-datos {
+  text-align: center;
+  justify-content: center;
+}
+
+#contacto {
+  text-align: center;
+}
+
+#contacto h2 {
+  color: #4c8d37;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4c8d37;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #03300c;
+}
+
+footer {
+  background-color: #07504c;
+  padding: 0;
+  border-top: 8px solid #4c8d37;
+  text-align: center;
+}
+
+.footer-logos img {
+  margin: 30px;
+  max-height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logos img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links img {
+  margin: 20px;
+  max-height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo-redes {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+}
+
+.logo-redes img {
+  opacity: 0.5;
+}
+
+.logo-redes img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.footer-links a {
+  color: #b9b4b4;
+  padding: 10px;
+}
+
+.footer-creditos {
+  text-align: center;
+  color: #b9b4b4;
+}
+
+footer p {
+  color: #b9b4b4;
+}
+
+@media (max-width: 768px) {
+  .logo-1 img {
+    width: 150px;
+  }
+  header {
+    padding: 10px;
+    text-align: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+  .cajon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .cajon img {
+    width: 100%;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .cifras {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cifra {
+    text-align: center;
+  }
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logos img {
+    max-width: 80%;
+    margin: 10px 0;
+  }
+  .logo-redes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .logo-redes img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-links a {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+  }
+  footer p {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .cajon {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 10px;
+  }
+  .footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-creditos {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .logo-redes img {
+    width: 40px;
+    height: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
