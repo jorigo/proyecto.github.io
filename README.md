@@ -1,0 +1,1 @@
+Este proyecto es el inicio de una landing page, la cual explica el proceso que reliza el grupo de investigacion GI2T, de la univesrsidad del pacifico; sobre el uso, apropiacion de las TIC, en el litoral pacifico
